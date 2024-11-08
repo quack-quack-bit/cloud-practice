@@ -28,7 +28,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: '*'
 
 pvc:
   path: /mnt/cloud-sample

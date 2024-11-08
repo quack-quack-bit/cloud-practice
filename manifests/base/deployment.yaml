@@ -1,19 +1,19 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloud-sample 
+  name: cloud-practice
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cloud-sample
+      app: cloud-practice
   template:
     metadata:
       labels:
-        app: cloud-sample 
+        app: cloud-practice
     spec:
       containers:
-        - name: cloud-sample 
-          image: cepgstapacr.azurecr.io/cloud-sample
+        - name: cloud-practice
+          image: cepgstapacr.azurecr.io/82240941:latest
           ports:
-          - containerPort: 8080
+            - containerPort: 8080
