@@ -1,16 +1,18 @@
 configMapGenerator:
-  - files:
-      - application.yml
-    name: cloud-practice-configmap
+- files:
+  - application.yml
+  name: cloud-practice-configmap
 resources:
-  - ../../base
-  - pvc.yaml
+- ../../base
+- pvc.yaml
 patchesStrategicMerge:
-  - deployment.yaml
-  - ingress.yaml
+- deployment.yaml
+- ingress.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namePrefix: prod-
 images:
-  - name: cepgstapacr.azurecr.io/82240941
-    newTag: 'latest'
+- name: cepgstapacr.azurecr.io/82240941
+  newTag: latest
+- name: cepgstapacr.azurecr.io/cloud-sample
+  newTag: "202411080749"
